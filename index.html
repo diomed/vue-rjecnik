@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rječnik stranih riječi</title>
+        <details>vue sort & search [computed]</details>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id="lista">
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <div class="column is-6 is-offset-3">
+                            <div class="sk-folding-cube">
+                                <div class="sk-cube1 sk-cube"></div>
+                                <div class="sk-cube2 sk-cube"></div>
+                                <div class="sk-cube4 sk-cube"></div>
+                                <div class="sk-cube3 sk-cube"></div>
+                            </div>
+                            <div class="box" > <!-- style="position: fixed; z-index: 1" -->
+                                <div class="field is-grouped">
+                                    <p class="control is-expanded">
+                                        <input type="text" v-model="search" class="input" />
+                                    </p>
+                                    <p class="control">
+                                        <a class="button is-info is-outlined" @click="clearSearchField()" v-if="search.length">clear</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-body">
+                    <div class="column is-6 is-offset-4">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <!--Show the filtered list instead of the full list -->
+                                <div class="tags has-addons" v-for="wtf in filteredList" style="margin-left: -40px">
+                                    <span class="tag is-info is-medium name">{{wtf.word}}</span>
+                                    <span class="tag is-link is-medium"><i class="fa fa-ge" aria-hidden="true"></i></span>
+                                    <span class="tag is-dark is-medium name">{{wtf.meaning}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+            <script src="js/index.js"></script>
+        </body>
+    </html>
+
