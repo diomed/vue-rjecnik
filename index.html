@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Rječnik stranih riječi</title>
-        <details>vue sort & search [computed]</details>
-        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css'>
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -24,6 +23,7 @@
                                 <div class="field is-grouped">
                                     <p class="control is-expanded">
                                         <input type="text" v-model="search" class="input" />
+                                        <i class="fa fa-icon-magnifier"></i>
                                     </p>
                                     <p class="control">
                                         <a class="button is-info is-outlined" @click="clearSearchField()" v-if="search.length">clear</a>
@@ -48,8 +48,7 @@
                     </div>
                 </div>
             </div>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.15/vue.min.js'></script>
             <script src="js/index.js"></script>
         </body>
     </html>
-
